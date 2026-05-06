@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-serif: "Crimson Pro", serif;
+  --font-mono: "Space Mono", monospace;
+
+  --color-bg: #0f0520;
+  --color-gold: #f0c060;
+  --color-cyan: #50e8d8;
+  --color-rose: #f06080;
+  --color-violet: #9060f0;
+  --color-green: #50e890;
+  --color-cream: #f0ece0;
+}
+
+:root {
+  --bg: #0f0520;
+  --panel: rgba(15, 5, 32, 0.92);
+  --gold: #f0c060;
+  --cyan: #50e8d8;
+  --rose: #f06080;
+  --violet: #9060f0;
+  --green: #50e890;
+  --cream: #f0ece0;
+  --dim: rgba(240, 236, 224, 0.55);
+  --border: rgba(240, 192, 96, 0.25);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--cream);
+  font-family: var(--font-serif);
+  overflow: hidden;
+}
+
+@keyframes pulse-heart {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.animate-pulse-heart {
+  animation: pulse-heart 2s ease-in-out infinite;
+}
+
+@keyframes warp {
+  0% { transform: scaleX(1) translateX(0); opacity: 1; }
+  50% { transform: scaleX(2.5) translateX(30px); opacity: 0.6; }
+  100% { transform: scaleX(1) translateX(0); opacity: 1; }
+}
+
+.animate-warp {
+  animation: warp 1.5s ease-in-out infinite;
+}
